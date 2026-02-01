@@ -1,0 +1,65 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    height: 100vh;
+}
+.container
+{
+    display: grid;
+    border: 2px solid black;
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: minmax(100px , auto);
+    grid-template-areas: "Main Main Main Main"
+                        "Aside Content1 Content1 Content1"
+                        "Aside Content2 Content2 Content2"
+                        "Aside Footer Footer Footer";
+}
+.main
+{
+    background-color: darkturquoise;
+    grid-area: Main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.aside
+{
+    background-color: rgb(139, 236, 238);
+    grid-area: Aside;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content1 {
+    background-color: darkturquoise;
+    grid-area: Content1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.content2
+{
+    background-color: darkturquoise;
+    grid-area: Content2;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer
+{
+    background-color: darkturquoise;
+    grid-area: Footer;
+     display: flex;
+    justify-content: center;
+    align-items: center;
+}
