@@ -1,95 +1,56 @@
-*
-{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+*{margin: 0;padding: 0;box-sizing: border-box;}
 
 html,body{
     width: 100%;
-    height: 100vh;
-    background-image:url(./pexels-muffin-2468773.jpg);
-    background-size:cover;
-    background-repeat: no-repeat;
-}
-nav{
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 10px;
 }
 
-#logo
+nav
+{
+    width: 100%;
+    height: 80px;
+    background-color:lightslategrey;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100000;
+}
+
+.logo
 {
     font-size: 2em;
-    letter-spacing: 2px;
-    color: white;
+    padding: 20px 30px;
 }
 
-.links a{
-    text-decoration: none;
-    padding: 10px 20px;
-    font-size: 20px;
-    color: white;
-    position: relative;
-}
-
-.reg a{
-    text-decoration: none;
-    font-size: 20px;
-    padding: 10px 20px;
-    background: indianred;
-    border-radius: 8px;
-    margin-top: 10px;
-    color: white;
-}
-
-.txt 
+.nav-links ul
 {
-    max-width: 600px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    color: white;
-    text-align: center;
-}
-.txt span{
-    letter-spacing: 5px;
-}
-.txt h1{
-    font-size: 3.5em;
-}
-.txt a{
-    text-decoration: none;
-    color: white;
-    background-color: indianred;
-    padding: 10px 20px;
-    letter-spacing: 5px;
+    display: flex;
+    gap:30px;
+    margin: 0 10px;
 }
 
-.links a:before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 0%;
-    height:100%;
-    border-bottom: 2px solid indianred;
-    transition:0.4s linear;
-}
-.links a:hover:before 
+.nav-links ul li
 {
-    width: 90%;
+    list-style-type: none;
+}
+.nav-links ul li a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
 }
 
-@media screen  and (max-width:786px) {
-    nav{
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-    }
-    
+.hero
+{
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    border: 2px  solid black;
+}
+
+.main
+{
+    width: 100%;
+    min-height: 100vh;
+    border: 2px  solid black;
 }
